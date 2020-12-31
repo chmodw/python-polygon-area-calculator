@@ -4,7 +4,8 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
-        return "Rectangle(width=" + self.width + ", height=" + self.height + ")"
+        return "Rectangle(width=" + str(self.width) + ", height=" + str(
+            self.height) + ")"
 
     def set_height(self, height):
         self.height = height
@@ -44,7 +45,7 @@ class Square(Rectangle):
         self.width = side
 
     def __str__(self):
-        return "Square(side=" + self.width + ")"
+        return "Square(side=" + str(self.width) + ")"
 
     def set_side(self, side):
         self.height = side
