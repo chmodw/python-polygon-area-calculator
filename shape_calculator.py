@@ -33,10 +33,7 @@ class Rectangle:
         return string
 
     def get_amount_inside(self, rect):
-        w = int(self.width / rect.width)
-        h = int(self.height / rect.height)
-
-        return (h if h > w else w) if w > 0 and h > 0 else 0
+        return int(self.width / rect.width) * int(self.height / rect.height)
 
 
 class Square(Rectangle):
@@ -50,8 +47,3 @@ class Square(Rectangle):
     def set_side(self, side):
         self.height = side
         self.width = side
-
-
-# rect = Rectangle(4, 8)
-
-# print(rect.get_amount_inside(Rectangle(4, 4)))
